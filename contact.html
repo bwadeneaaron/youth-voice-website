@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Youth Voice</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+    <h2>Youth Voice</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="stories.html">Stories</a>
+        <a href="share.html">Share Story</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="images/10.jpg" alt="Contact Youth Voice">
+    <div class="hero-text">
+        <h1>Contact Us</h1>
+        <p>We are here to listen, support, and respond to your voice.</p>
+    </div>
+</section>
+
+<main class="container">
+
+    <div class="contact-wrapper">
+
+        <!-- INFO -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>We respond to all messages as soon as possible.</p>
+
+            <p><b>Email:</b> support@youthvoice.com</p>
+            <p><b>Phone:</b> +256 700 000 000</p>
+            <p><b>Location:</b> Uganda</p>
+        </div>
+
+        <!-- FORM -->
+        <form class="contact-form" onsubmit="sendMessage(event)">
+
+            <h2>Send a Message</h2>
+
+            <input type="text" id="name" placeholder="Your name" required>
+
+            <input type="email" id="email" placeholder="Your email" required>
+
+            <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+
+            <button type="submit">📩 Send Message</button>
+
+        </form>
+
+    </div>
+
+</main>
+
+<!-- POPUP -->
+<div id="popup" class="popup hidden">
+    <div class="popup-box">
+        <h2>✅ Message Sent!</h2>
+        <p id="popup-text"></p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Youth Voice. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

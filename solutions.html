@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - Youth Voice</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+    <h2>Youth Voice</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="stories.html">Stories</a>
+        <a href="share.html">Share Story</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="images/5.jpg" alt="Youth Solutions">
+    <div class="hero-text">
+        <h1>Solutions & Opportunities for Youth</h1>
+        <p>Real support. Real change. Real opportunities.</p>
+    </div>
+</section>
+
+<main class="container">
+
+    <h1>What Can Help Youth Thrive?</h1>
+    <p>We believe every young person deserves support, opportunity, and hope.</p>
+
+    <div class="grid">
+
+        <div class="card" onclick="openModal('courses')">
+            <h3>📚 Education & Skills Training</h3>
+            <p>Learn coding, design, business, and practical life skills.</p>
+        </div>
+
+        <div class="card" onclick="openModal('mental')">
+            <h3>🧠 Mental Health Support</h3>
+            <p>Access guidance, counseling, and safe support systems.</p>
+        </div>
+
+        <div class="card" onclick="openModal('mentor')">
+            <h3>👨‍🏫 Mentorship Programs</h3>
+            <p>Connect with mentors who guide your future.</p>
+        </div>
+
+        <div class="card" onclick="openModal('jobs')">
+            <h3>💼 Youth Employment</h3>
+            <p>Find internships, jobs, and career-building opportunities.</p>
+        </div>
+
+        <div class="card" onclick="openModal('business')">
+            <h3>🚀 Entrepreneurship</h3>
+            <p>Start and grow your own business ideas.</p>
+        </div>
+
+        <div class="card" onclick="openModal('community')">
+            <h3>🤝 Community Support</h3>
+            <p>Join communities that support and uplift you.</p>
+        </div>
+
+    </div>
+
+    <section class="cta">
+        <h2>Ready to Take Action?</h2>
+        <p>Your future starts with one step.</p>
+        <button class="primary-btn">Get Started</button>
+    </section>
+
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+    <div class="modal-box">
+        <span class="close" onclick="closeModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Youth Voice. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

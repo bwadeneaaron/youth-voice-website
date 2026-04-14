@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - Youth Voice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h2>Youth Voice</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="stories.html">Stories</a>
+        <a href="share.html">Share Story</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero-small">
+    <h1>Community Stories</h1>
+    <p>Real experiences from real young people</p>
+</section>
+
+<main class="container">
+
+    <div class="feed-grid">
+
+        <!-- POST -->
+        <div class="post">
+            <h3>Daniel’s Comeback</h3>
+            <p class="short-text">
+                From addiction to success — how he rebuilt his life step by step.
+            </p>
+
+            <p class="full-text hidden">
+                Daniel struggled for years, but through discipline, mentorship,
+                and self-belief, he slowly rebuilt his life. Today, he mentors
+                other youth facing the same challenges.
+            </p>
+
+            <div class="post-actions">
+                <button class="like-btn">❤️ Like</button>
+                <button onclick="toggleComment(this)">💬 Comment</button>
+                <button onclick="toggleReadMore(this)">📖 Read More</button>
+            </div>
+
+            <div class="comment-box hidden">
+                <input type="text" placeholder="Write a comment...">
+            </div>
+        </div>
+
+        <!-- POST -->
+        <div class="post">
+            <h3>James’ Choice</h3>
+            <p class="short-text">
+                Standing strong against peer pressure and choosing a better path.
+            </p>
+
+            <p class="full-text hidden">
+                James faced intense pressure from friends, but he chose education
+                and self-growth. Today, he inspires others to stand firm.
+            </p>
+
+            <div class="post-actions">
+                <button class="like-btn">❤️ Like</button>
+                <button onclick="toggleComment(this)">💬 Comment</button>
+                <button onclick="toggleReadMore(this)">📖 Read More</button>
+            </div>
+
+            <div class="comment-box hidden">
+                <input type="text" placeholder="Write a comment...">
+            </div>
+        </div>
+
+        <!-- POST -->
+        <div class="post">
+            <h3>Sarah Speaks Up</h3>
+            <p class="short-text">
+                Her mental health journey and how she found her voice again.
+            </p>
+
+            <p class="full-text hidden">
+                Sarah learned to open up about her struggles and seek help.
+                Her courage helped her regain confidence and inspire others.
+            </p>
+
+            <div class="post-actions">
+                <button class="like-btn">❤️ Like</button>
+                <button onclick="toggleComment(this)">💬 Comment</button>
+                <button onclick="toggleReadMore(this)">📖 Read More</button>
+            </div>
+
+            <div class="comment-box hidden">
+                <input type="text" placeholder="Write a comment...">
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 Youth Voice. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // LIKE BUTTON
+    document.querySelectorAll(".like-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            if (button.innerHTML.includes("❤️")) {
+                button.innerHTML = "💖 Liked";
+            } else {
+                button.innerHTML = "❤️ Like";
+            }
+        });
+    });
+
+    // COMMENT TOGGLE
+    function toggleComment(btn) {
+        const box = btn.parentElement.nextElementSibling;
+        box.classList.toggle("hidden");
+    }
+
+    // READ MORE
+    function toggleReadMore(btn) {
+        const post = btn.closest(".post");
+        const shortText = post.querySelector(".short-text");
+        const fullText = post.querySelector(".full-text");
+
+        shortText.classList.toggle("hidden");
+        fullText.classList.toggle("hidden");
+
+        btn.innerText = fullText.classList.contains("hidden") 
+            ? "📖 Read More" 
+            : "📕 Show Less";
+    }
+</script>
+
+</body>
+</html>

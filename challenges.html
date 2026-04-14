@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Challenges - Youth Voice</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+    <h2>Youth Voice</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="stories.html">Stories</a>
+        <a href="share.html">Share Story</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="images/4.jpg" alt="Youth Challenges">
+    <div class="hero-text">
+        <h1>Challenges Facing Youth</h1>
+        <p>Understanding problems is the first step to solving them</p>
+    </div>
+</section>
+
+<main class="container">
+
+    <h1>Main Challenges</h1>
+    <p>Click on any challenge to learn more and see solutions.</p>
+
+    <div class="grid">
+
+        <div class="card challenge-card" onclick="openChallenge('mental')">
+            <h3>🧠 Mental Health Pressure</h3>
+            <p>Stress, anxiety, and depression caused by school and social pressure.</p>
+        </div>
+
+        <div class="card challenge-card" onclick="openChallenge('jobs')">
+            <h3>💼 Unemployment</h3>
+            <p>Lack of jobs and skills limits youth independence and growth.</p>
+        </div>
+
+        <div class="card challenge-card" onclick="openChallenge('cyber')">
+            <h3>📱 Cyberbullying</h3>
+            <p>Online harassment and social pressure affect confidence and wellbeing.</p>
+        </div>
+
+        <div class="card challenge-card" onclick="openChallenge('drugs')">
+            <h3>🚫 Substance Abuse</h3>
+            <p>Peer pressure can lead to harmful habits affecting future success.</p>
+        </div>
+
+        <div class="card challenge-card" onclick="openChallenge('education')">
+            <h3>🎓 Education Inequality</h3>
+            <p>Some students lack access to quality learning resources.</p>
+        </div>
+
+        <div class="card challenge-card" onclick="openChallenge('identity')">
+            <h3>🧭 Identity Pressure</h3>
+            <p>Many youth struggle with peer pressure and self-confidence.</p>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+    <div class="modal-box">
+        <span class="close" onclick="closeModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+
+        <a href="solutions.html">
+            <button class="primary-btn">See Solutions</button>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Youth Voice. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
